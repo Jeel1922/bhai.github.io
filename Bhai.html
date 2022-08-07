@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>@import url(https://fonts.googleapis.com/css?family=Pacifico);
+        body {
+            background: #ffebd0;
+        }
+        
+        
+        *{
+          margin: 0;
+          padding: 0;
+          outline: none;
+          border: none;
+            box-sizing: border-box;
+        }
+        *:before,
+        *:after{
+            box-sizing: border-box;
+        }
+        
+        .container{
+            margin: 4% auto;
+            width: 210px;
+            height: 140px;
+            position: relative;
+            perspective: 1000px;
+        }
+        #carousel{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotation 20s infinite linear;
+        }
+        #carousel:hover{
+            animation-play-state: paused;
+        }
+        #carousel figure{
+            display: block;
+            position: absolute;
+            width: 186px;
+            height: 116px;
+            left: 10px;
+            top: 10px;
+            background: black;
+            overflow: hidden;
+            border: solid 5px black;
+        }
+        #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+        #carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+        #carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+        #carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+        #carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+        #carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+        #carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+        #carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+        #carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+        
+        img{
+            -webkit-filter: grayscale(1);
+            cursor: pointer;
+            transition: all .5s ease;
+        }
+        img:hover{
+            -webkit-filter: grayscale(0);
+          transform: scale(1.2,1.2);
+        }
+        
+        @keyframes rotation{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+        .title{
+         bottom:2%;
+        font-family: 'Pacifico', cursive;
+          font-size: 3.5rem;
+          position: fixed;
+        left:50%;
+          transform:translate(-50%,0)
+        }
+        .cake {
+            position: absolute;
+            width: 330px;
+            height: 240px;
+            top:50%;
+            left:50%;
+          transform:translate(-50%,-50%);
+        }
+        .cake_bottom {
+            position: absolute;
+            width: 330px;
+            height: 5px;
+            bottom: 0px;
+            background: #9dc5c4;
+            border-top: 2px solid #e6e7e9;
+        }
+        .cake_bottom2 {
+            position: absolute;
+            width: 320px;
+            bottom: 7px;
+            background: #cd7a1c;
+            height: 22px;
+            right: 5px;
+            border-radius: 3px 3px 0px 0px;
+            left: 5px;
+            box-shadow: -160px 0px 0px #ad631c inset;
+        }
+        .cake_bottom3 {
+            box-shadow: 0px -3px 0px #fddbea, -155px 0px 0px #5a4027 inset;
+            height: 52px;
+            border-top: 5px solid #ff7ebe;
+            background: #744c28;
+            position: absolute;
+            width: 310px;
+            bottom: 29px;
+            right: 10px;
+            border-radius: 5px 5px 0px 0px;
+            left: 10px;
+        }
+        .cake_top1 {
+            box-shadow: -115px 0px 0px #ff9201 inset;
+            height: 46px;
+            background: #ffb009;
+            position: absolute;
+            width: 230px;
+            bottom: 89px;
+            right: 50px;
+            border-radius: 5px 5px 0px 0px;
+            left: 50px;
+            border-bottom: 3px solid #c14500;
+        }
+        .cake_top2 {
+            box-shadow: -70px 0px 0px #5b3f29 inset;
+            height: 52px;
+            background: #744c28;
+            position: absolute;
+            width: 140px;
+            bottom: 138px;
+            border-radius: 5px 5px 0px 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0px auto;
+        }
+        .cake_line {
+            bottom: 0px;
+            height: 30px;
+            width: 5px;
+            position: absolute;
+        }
+        #cake_line1 {
+            left: 2px;
+            background: #ff9101;
+        }
+        #cake_line2 {
+            left: 12px;
+            background: #ff9101;
+        }
+        #cake_line3 {
+            left: 22px;
+            background: #ff9101;
+        }
+        #cake_line4 {
+            left: 32px;
+            background: #ff9101;
+        }
+        #cake_line5 {
+            left: 42px;
+            background: #ff9101;
+        }
+        #cake_line6 {
+            left: 52px;
+            background: #ff9101;
+        }
+        #cake_line7 {
+            left: 62px;
+            background: #ff9101;
+        }
+        #cake_line8 {
+            left: 72px;
+            background: #ff9101;
+        }
+        #cake_line9 {
+            left: 82px;
+            background: #ff9101;
+        }
+        #cake_line10 {
+            left: 92px;
+            background: #ff9101;
+        }
+        #cake_line11 {
+            left: 102px;
+            background: #ff9101;
+        }
+        #cake_line12 {
+            left: 112px;
+            background: #ff9101;
+        }
+        #cake_line13 {
+            right: 3px;
+            background: #ff7000;
+        }
+        #cake_line14 {
+            right: 13px;
+            background: #ff7000;
+        }
+        #cake_line15 {
+            right: 23px;
+            background: #ff7000;
+        }
+        #cake_line16 {
+            right: 33px;
+            background: #ff7000;
+        }
+        #cake_line17 {
+            right: 43px;
+            background: #ff7000;
+        }
+        #cake_line18 {
+            right: 53px;
+            background: #ff7000;
+        }
+        #cake_line19 {
+            right: 63px;
+            background: #ff7000;
+        }
+        #cake_line20 {
+            right: 73px;
+            background: #ff7000;
+        }
+        #cake_line21 {
+            right: 83px;
+            background: #ff7000;
+        }
+        #cake_line22 {
+            right: 93px;
+            background: #ff7000;
+        }
+        #cake_line23 {
+            right: 103px;
+            background: #ff7000;
+        }
+        #cake_line24 {
+            right: 113px;
+            background: #ff7000;
+        }
+        .cherry {
+            width: 15px;
+            top: -15px;
+            height: 15px;
+            border-radius: 100%;
+            background: #fff;
+            position: absolute;
+            box-shadow: -2px -1px 0px 6px #ff4d59 inset;
+        }
+        #cherry1 {
+            left: 20px;
+        }
+        #cherry2 {
+            left: 64px;
+        }
+        #cherry3 {
+            left: 108px;
+        }
+        #cherry4 {
+            right: 64px;
+        }
+        #cherry5 {
+            right: 20px;
+        }
+        .cake_circle {
+            height: 56px;
+            width: 56px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 0px 12px #ffebc8 inset;
+            top: -30px;
+            z-index: 100;
+            position: absolute;
+        }
+        .circles {
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            overflow: hidden;
+            top: 0px;
+        }
+        #circle1 {
+            left: -1px;
+        }
+        #circle2 {
+            left: 43px;
+        }
+        #circle3 {
+            left: 87px;
+        }
+        #circle4 {
+            right: 43px;
+        }
+        #circle5 {
+            right: -1px;
+        }
+        .cake_top1_creams {
+            height: 18px;
+            border-radius: 5px;
+            background: #f24282;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+        }
+        .cake_top1_cream1 {
+            position: absolute;
+            left: -3px;
+            height: 25px;
+            width: 15px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_top1_cream2 {
+            position: absolute;
+            left: 12px;
+            height: 25px;
+            width: 10px;
+            border-radius: 9px;
+            background: #744c28;
+            top: 10px;
+        }
+        .cake_top1_cream3 {
+            position: absolute;
+            left: 22px;
+            height: 23px;
+            width: 10px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_top1_cream4 {
+            position: absolute;
+            left: 32px;
+            height: 25px;
+            width: 12px;
+            border-radius: 9px;
+            background: #744c28;
+            top: 13px;
+        }
+        .cake_top1_cream5 {
+            position: absolute;
+            left: 44px;
+            height: 30px;
+            width: 13px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_top1_cream6 {
+            position: absolute;
+            left: 57px;
+            height: 25px;
+            width: 13px;
+            border-radius: 9px;
+            background: #744c28;
+            top: 9px;
+        }
+        .cake_top1_cream7 {
+            position: absolute;
+            right: -3px;
+            height: 22px;
+            width: 8px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_top1_cream8 {
+            position: absolute;
+            right: 5px;
+            height: 25px;
+            width: 10px;
+            border-radius: 9px;
+            background: #5b3f29;
+            top: 8px;
+        }
+        .cake_top1_cream9 {
+            position: absolute;
+            right: 15px;
+            height: 31px;
+            width: 10px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_top1_cream10 {
+            position: absolute;
+            right: 25px;
+            height: 15px;
+            width: 10px;
+            border-radius: 9px;
+            background: #5b3f29;
+            top: 13px;
+        }
+        .cake_top1_cream11 {
+            position: absolute;
+            right: 35px;
+            height: 24px;
+            width: 13px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_top1_cream12 {
+            position: absolute;
+            right: 48px;
+            height: 15px;
+            width: 12px;
+            border-radius: 9px;
+            background: #5b3f29;
+            top: 10px;
+        }
+        .cake_top1_cream13 {
+            position: absolute;
+            right: 60px;
+            height: 26px;
+            width: 10px;
+            border-radius: 9px;
+            background: #f14380;
+        }
+        .cake_bottom3_creams {
+            height: 22px;
+            border-radius: 5px;
+            background: #ff7fbf;
+            position: absolute;
+            top: -5px;
+            width: 100%;
+        }
+        .cake_bottom3_cream1 {
+            position: absolute;
+            left: -3px;
+            height: 35px;
+            width: 18px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream2 {
+            position: absolute;
+            left: 15px;
+            height: 24px;
+            width: 15px;
+            border-radius: 9px;
+            top: 12px;
+            background: #744c28;
+        }
+        .cake_bottom3_cream3 {
+            position: absolute;
+            left: 30px;
+            height: 38px;
+            width: 10px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream4 {
+            position: absolute;
+            left: 40px;
+            height: 24px;
+            width: 15px;
+            border-radius: 9px;
+            top: 15px;
+            background: #744c28;
+        }
+        .cake_bottom3_cream5 {
+            position: absolute;
+            left: 55px;
+            height: 30px;
+            width: 15px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream6 {
+            position: absolute;
+            left: 70px;
+            height: 20px;
+            width: 12px;
+            border-radius: 100px;
+            top: 17px;
+            background: #744c28;
+        }
+        .cake_bottom3_cream7 {
+            position: absolute;
+            left: 82px;
+            height: 40px;
+            width: 18px;
+            border-radius: 100px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream8 {
+            position: absolute;
+            left: 100px;
+            height: 20px;
+            width: 22px;
+            border-radius: 100px;
+            top: 10px;
+            background: #744c28;
+        }
+        .cake_bottom3_cream9 {
+            position: absolute;
+            left: 122px;
+            height: 67px;
+            width: 24px;
+            border-radius: 100px;
+            background: #ff7fbf;
+            z-index: 3;
+        }
+        .cake_bottom3_cream10 {
+            position: absolute;
+            left: 146px;
+            height: 20px;
+            width: 9px;
+            border-radius: 100px;
+            top: 16px;
+            background: #744c28;
+        }
+        .cake_bottom3_cream11 {
+            position: absolute;
+            right: 140px;
+            height: 37px;
+            width: 15px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream12 {
+            position: absolute;
+            right: 128px;
+            height: 23px;
+            width: 12px;
+            border-radius: 100px;
+            top: 13px;
+            background: #5b3f27;
+        }
+        .cake_bottom3_cream13 {
+            position: absolute;
+            left: 116px;
+            height: 59px;
+            width: 36px;
+            border-radius: 100px;
+            background: #744c28;
+            z-index: 2;
+            top: 15px;
+        }
+        .cake_bottom3_cream14 {
+            position: absolute;
+            right: 108px;
+            height: 64px;
+            width: 20px;
+            border-radius: 9px;
+            background: #ff7fbf;
+            z-index: 3;
+        }
+        .cake_bottom3_cream15 {
+            position: absolute;
+            right: 102px;
+            height: 55px;
+            width: 31px;
+            border-radius: 100px;
+            background: #5a4027;
+            z-index: 2;
+            top: 15px;
+        }
+        .cake_bottom3_cream16 {
+            position: absolute;
+            right: 93px;
+            height: 23px;
+            width: 15px;
+            border-radius: 100px;
+            top: 8px;
+            background: #5b3f27;
+        }
+        .cake_bottom3_cream17 {
+            position: absolute;
+            right: 78px;
+            height: 47px;
+            width: 15px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream18 {
+            position: absolute;
+            right: 70px;
+            height: 23px;
+            width: 8px;
+            border-radius: 100px;
+            top: 16px;
+            background: #5b3f27;
+        }
+        .cake_bottom3_cream19 {
+            position: absolute;
+            right: 58px;
+            height: 30px;
+            width: 12px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream20 {
+            position: absolute;
+            right: 43px;
+            height: 23px;
+            width: 15px;
+            border-radius: 100px;
+            top: 8px;
+            background: #5b3f27;
+        }
+        .cake_bottom3_cream21 {
+            position: absolute;
+            right: 28px;
+            height: 38px;
+            width: 15px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom3_cream22 {
+            position: absolute;
+            right: 10px;
+            height: 23px;
+            width: 18px;
+            border-radius: 100px;
+            top: 14px;
+            background: #5b3f27;
+        }
+        .cake_bottom3_cream23 {
+            position: absolute;
+            right: -3px;
+            height: 30px;
+            width: 13px;
+            border-radius: 9px;
+            background: #ff7fbf;
+        }
+        .cake_bottom1_creams {
+            height: 10px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+        .cake_bottom1_cream1 {
+            position: absolute;
+            left: 56px;
+            height: 6px;
+            width: 14px;
+            border-radius: 20px 20px 0px 0px;
+            background: #5a4027;
+            bottom: 0px;
+        }
+        .cake_bottom1_cream2 {
+            position: absolute;
+            left: 115px;
+            height: 5px;
+            width: 10px;
+            border-radius: 20px 20px 0px 0px;
+            background: #5a4027;
+            bottom: 0px;
+        }
+        .cake_bottom1_cream3 {
+            position: absolute;
+            right: 33px;
+            height: 8px;
+            width: 14px;
+            border-radius: 20px 20px 0px 0px;
+            background: #744c29;
+            bottom: 0px;
+        }
+        .cake_bottom1_cream4 {
+            position: absolute;
+            right: 58px;
+            height: 5px;
+            width: 11px;
+            border-radius: 20px 20px 0px 0px;
+            background: #744c29;
+            bottom: 0px;
+        }
+        .gift_top {
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+            o-transition: all 0.6s ease-in-out;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s;
+        }
+        .gift:hover .gift_top {
+            top: -100px;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+        }
+        .gift_ribbon_left {
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            o-transition: all 0.3s ease-in-out;
+            -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+        }
+        .gift_ribbon_center {
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            o-transition: all 0.3s ease-in-out;
+            -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+        }
+        .gift:hover .gift_ribbon_left {
+            height: 32px;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        .gift:hover .gift_ribbon_center {
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+            height: 102px;
+        }
+        .gift_box_bottom_top {
+            -webkit-transition-delay: 1.1s;
+            transition-delay: 1.1s;
+        }
+        .gift:hover .gift_box_bottom_top {
+            height: 0px;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+            o-transition: all 0.3s ease-in-out;
+        }
+        .giftcard {
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0px 1px 0px 1px #fee4c0;
+            padding: 10px;
+            width: 80px;
+            font-size: 15px;
+        font-family: 'Source Sans Pro', sans-serif;
+            color: #ff3f48;
+            left: 0px;
+            top: 100px;
+            right: 0px;
+            margin: 0px auto;
+            position: absolute;
+            line-height: 26px;
+            z-index: -1;
+            text-align: center;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+            -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+            o-transition: all 0.6s ease-in-out;
+        }
+        .gift:hover .giftcard {
+            top: -10px;
+        }
+        .one_number {
+            position: absolute;
+            left: 147px;
+            top: 25px;
+            width: 9px;
+        }
+        .one_number:after {
+            content: "";
+            height: 5px;
+            width: 0px;
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            left: 0px;
+        }
+        .one_number:before {
+            content: "";
+            height: 25px;
+            width: 5px;
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            right: 1px;
+        }
+        .seven_number {
+            position: absolute;
+            right: 147px;
+            top: 25px;
+            width: 14px;
+        }
+        .seven_number:after {
+            content: "";
+            height: 5px;
+            /*width: 20px;*/
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            left: -12px;
+        }
+        .seven_number:before {
+            content: "";
+            height: 27px;
+            width: 5px;
+            position: absolute;
+            background: #c6c6c6;
+            top: 0px;
+            right: 3px;
+        }
+        .seven_flame {
+            height: 12px;
+            width: 6px;
+            border-radius: 100%;
+            background: #ffd215;
+            position: absolute;
+            right: 3px;
+            -webkit-animation: flame 0.5s infinite linear;
+            animation: flame 0.5s infinite linear;
+            -moz-animation: flame 0.5s infinite linear;
+            bottom: 2px;
+        }
+        .one_flame {
+            height: 12px;
+            width: 6px;
+            border-radius: 100%;
+            background: #ffd215;
+            position: absolute;
+            right: 1px;
+            bottom: 2px;
+            -webkit-animation: flame 0.5s infinite linear;
+            animation: flame 0.5s infinite linear;
+            -moz-animation: flame 0.5s infinite linear;
+        }
+        @-webkit-keyframes flame {
+            0% {
+                height: 12px;
+                background: #fdd214;
+            }
+            50% {
+                height: 14px;
+                background: #ffc617;
+            }
+            100% {
+                height: 12px;
+                background: #fdd214;
+            }
+        }
+        @keyframes flame {
+            0% {
+                height: 12px;
+                background: #fdd214;
+            }
+            50% {
+                height: 14px;
+                background: #ffc617;
+            }
+            100% {
+                height: 12px;
+                background: #fdd214;
+            }
+        }
+        @-moz-keyframes flame {
+            0% {
+                height: 12px;
+                background: #fdd214;
+            }
+            50% {
+                height: 14px;
+                background: #ffc617;
+            }
+            100% {
+                height: 12px;
+                background: #fdd214;
+            }
+        }
+        
+        .balloon > div {
+          width: 104px;
+          height: 140px;
+          background: rgba(182, 15, 97, 0.9);
+          border-radius: 0;
+          border-radius: 80% 80% 80% 80%;
+          margin: 0 auto;
+          position: absolute;
+          padding: 10px;
+          box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
+          -webkit-transform-origin: bottom center;
+        }
+        .balloon > div:nth-child(1) {
+          background: rgba(182, 15, 97, 0.9);
+          left: 0;
+          box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+          -webkit-animation: balloon1 6s ease-in-out infinite;
+          -moz-animation: balloon1 6s ease-in-out infinite;
+          -o-animation: balloon1 6s ease-in-out infinite;
+          animation: balloon1 6s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(1):before {
+          color: rgba(182, 15, 97, 0.9);
+        }
+        .balloon > div:nth-child(2) {
+          background: rgba(242, 112, 45, 0.9);
+          left: 120px;
+          box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
+          -webkit-animation: balloon2 6s ease-in-out infinite;
+          -moz-animation: balloon2 6s ease-in-out infinite;
+          -o-animation: balloon2 6s ease-in-out infinite;
+          animation: balloon2 6s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(2):before {
+          color: rgba(242, 112, 45, 0.9);
+        }
+        .balloon > div:nth-child(3) {
+          background: rgba(45, 181, 167, 0.9);
+          left: 240px;
+          box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+          -webkit-animation: balloon4 6s ease-in-out infinite;
+          -moz-animation: balloon4 6s ease-in-out infinite;
+          -o-animation: balloon4 6s ease-in-out infinite;
+          animation: balloon4 6s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(3):before {
+          color: rgba(45, 181, 167, 0.9);
+        }
+        .balloon > div:nth-child(4) {
+          background: rgba(190, 61, 244, 0.9);
+          left: 360px;
+          box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
+          -webkit-animation: balloon1 5s ease-in-out infinite;
+          -moz-animation: balloon1 5s ease-in-out infinite;
+          -o-animation: balloon1 5s ease-in-out infinite;
+          animation: balloon1 5s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(4):before {
+          color: rgba(190, 61, 244, 0.9);
+        }
+        .balloon > div:nth-child(5) {
+          background: rgba(180, 224, 67, 0.9);
+          left: 480px;
+          box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+          -webkit-animation: balloon3 5s ease-in-out infinite;
+          -moz-animation: balloon3 5s ease-in-out infinite;
+          -o-animation: balloon3 5s ease-in-out infinite;
+          animation: balloon3 5s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(5):before {
+          color: rgba(180, 224, 67, 0.9);
+        }
+        .balloon > div:nth-child(6) {
+          background: rgba(242, 194, 58, 0.9);
+          left: 600px;
+          box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
+          -webkit-animation: balloon2 3s ease-in-out infinite;
+          -moz-animation: balloon2 3s ease-in-out infinite;
+          -o-animation: balloon2 3s ease-in-out infinite;
+          animation: balloon2 3s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(6):before {
+          color: rgba(242, 194, 58, 0.9);
+        }
+        .balloon > div:before {
+          color: rgba(182, 15, 97, 0.9);
+          position: absolute;
+          bottom: -11px;
+          left: 52px;
+          content: "▲";
+          font-size: 1em;
+        }
+        span {
+          font-size: 4.8em;
+          color: white;
+          position: relative;
+          top: 30px;
+          left: 50%;
+          margin-left: -27px;
+        }
+        /*BALLOON 1 4*/
+        @-webkit-keyframes balloon1 {
+          0%,
+          100% {
+            -webkit-transform: translateY(0) rotate(-6deg);
+          }
+          50% {
+            -webkit-transform: translateY(-20px) rotate(8deg);
+          }
+        }
+        @-moz-keyframes balloon1 {
+          0%,
+          100% {
+            -moz-transform: translateY(0) rotate(-6deg);
+          }
+          50% {
+            -moz-transform: translateY(-20px) rotate(8deg);
+          }
+        }
+        @-o-keyframes balloon1 {
+          0%,
+          100% {
+            -o-transform: translateY(0) rotate(-6deg);
+          }
+          50% {
+            -o-transform: translateY(-20px) rotate(8deg);
+          }
+        }
+        @keyframes balloon1 {
+          0%,
+          100% {
+            transform: translateY(0) rotate(-6deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(8deg);
+          }
+        }
+        /* BAllOON 2 5*/
+        @-webkit-keyframes balloon2 {
+          0%,
+          100% {
+            -webkit-transform: translateY(0) rotate(6eg);
+          }
+          50% {
+            -webkit-transform: translateY(-30px) rotate(-8deg);
+          }
+        }
+        @-moz-keyframes balloon2 {
+          0%,
+          100% {
+            -moz-transform: translateY(0) rotate(6deg);
+          }
+          50% {
+            -moz-transform: translateY(-30px) rotate(-8deg);
+          }
+        }
+        @-o-keyframes balloon2 {
+          0%,
+          100% {
+            -o-transform: translateY(0) rotate(6deg);
+          }
+          50% {
+            -o-transform: translateY(-30px) rotate(-8deg);
+          }
+        }
+        @keyframes balloon2 {
+          0%,
+          100% {
+            transform: translateY(0) rotate(6deg);
+          }
+          50% {
+            transform: translateY(-30px) rotate(-8deg);
+          }
+        }
+        /* BAllOON 0*/
+        @-webkit-keyframes balloon3 {
+          0%,
+          100% {
+            -webkit-transform: translate(0, -10px) rotate(6eg);
+          }
+          50% {
+            -webkit-transform: translate(-20px, 30px) rotate(-8deg);
+          }
+        }
+        @-moz-keyframes balloon3 {
+          0%,
+          100% {
+            -moz-transform: translate(0, -10px) rotate(6eg);
+          }
+          50% {
+            -moz-transform: translate(-20px, 30px) rotate(-8deg);
+          }
+        }
+        @-o-keyframes balloon3 {
+          0%,
+          100% {
+            -o-transform: translate(0, -10px) rotate(6eg);
+          }
+          50% {
+            -o-transform: translate(-20px, 30px) rotate(-8deg);
+          }
+        }
+        @keyframes balloon3 {
+          0%,
+          100% {
+            transform: translate(0, -10px) rotate(6eg);
+          }
+          50% {
+            transform: translate(-20px, 30px) rotate(-8deg);
+          }
+        }
+        /* BAllOON 3*/
+        @-webkit-keyframes balloon4 {
+          0%,
+          100% {
+            -webkit-transform: translate(10px, -10px) rotate(-8eg);
+          }
+          50% {
+            -webkit-transform: translate(-15px, 20px) rotate(10deg);
+          }
+        }
+        @-moz-keyframes balloon4 {
+          0%,
+          100% {
+            -moz-transform: translate(10px, -10px) rotate(-8eg);
+          }
+          50% {
+            -moz-transform: translate(-15px, 10px) rotate(10deg);
+          }
+        }
+        @-o-keyframes balloon4 {
+          0%,
+          100% {
+            -o-transform: translate(10px, -10px) rotate(-8eg);
+          }
+          50% {
+            -o-transform: translate(-15px, 10px) rotate(10deg);
+          }
+        }
+        @keyframes balloon4 {
+          0%,
+          100% {
+            transform: translate(10px, -10px) rotate(-8eg);
+          }
+          50% {
+            transform: translate(-15px, 10px) rotate(10deg);
+          }
+        }
+        </style>
+</head>
+<body>
+    
+  
+  <center>
+    <div class="title">Happy Birthday, Mammaya!</div>
+  <body>
+  </center>
+  
+          <section class="cake">
+              <div class="one_number">
+                  <div class="one_flame"></div>
+              </div>
+              <div class="seven_number">
+                  <div class="seven_flame"></div>
+              </div>
+              <section class="cake_top2">
+                  <section class="cake_top1_creams">
+                      <div class="cake_top1_cream1"></div>
+                      <div class="cake_top1_cream2"></div>
+                      <div class="cake_top1_cream3"></div>
+                      <div class="cake_top1_cream4"></div>
+                      <div class="cake_top1_cream5"></div>
+                      <div class="cake_top1_cream6"></div>
+                      <div class="cake_top1_cream7"></div>
+                      <div class="cake_top1_cream8"></div>
+                      <div class="cake_top1_cream9"></div>
+                      <div class="cake_top1_cream10"></div>
+                      <div class="cake_top1_cream11"></div>
+                      <div class="cake_top1_cream12"></div>
+                      <div class="cake_top1_cream13"></div>
+                  </section>
+              </section>
+              <section class="cake_top1">
+                  <div class="cherry" id="cherry1"></div>
+                  <div class="cherry" id="cherry2"></div>
+                  <div class="cherry" id="cherry3"></div>
+                  <div class="cherry" id="cherry4"></div>
+                  <div class="cherry" id="cherry5"></div>
+                  <section class="circles">
+                      <div class="cake_circle" id="circle1"></div>
+                      <div class="cake_circle" id="circle2"></div>
+                      <div class="cake_circle" id="circle3"></div>
+                      <div class="cake_circle" id="circle4"></div>
+                      <div class="cake_circle" id="circle5"></div>
+                  </section>
+                  <div class="cake_line" id="cake_line1"></div>
+                  <div class="cake_line" id="cake_line2"></div>
+                  <div class="cake_line" id="cake_line3"></div>
+                  <div class="cake_line" id="cake_line4"></div>
+                  <div class="cake_line" id="cake_line5"></div>
+                  <div class="cake_line" id="cake_line6"></div>
+                  <div class="cake_line" id="cake_line7"></div>
+                  <div class="cake_line" id="cake_line8"></div>
+                  <div class="cake_line" id="cake_line9"></div>
+                  <div class="cake_line" id="cake_line10"></div>
+                  <div class="cake_line" id="cake_line11"></div>
+                  <div class="cake_line" id="cake_line12"></div>
+                  <div class="cake_line" id="cake_line13"></div>
+                  <div class="cake_line" id="cake_line14"></div>
+                  <div class="cake_line" id="cake_line15"></div>
+                  <div class="cake_line" id="cake_line16"></div>
+                  <div class="cake_line" id="cake_line17"></div>
+                  <div class="cake_line" id="cake_line18"></div>
+                  <div class="cake_line" id="cake_line19"></div>
+                  <div class="cake_line" id="cake_line20"></div>
+                  <div class="cake_line" id="cake_line21"></div>
+                  <div class="cake_line" id="cake_line22"></div>
+                  <div class="cake_line" id="cake_line23"></div>
+                  <div class="cake_line" id="cake_line24"></div>
+              </section>
+              <section class="cake_bottom3">
+                  <section class="cake_bottom3_creams">
+                      <div class="cake_bottom3_cream1"></div>
+                      <div class="cake_bottom3_cream2"></div>
+                      <div class="cake_bottom3_cream3"></div>
+                      <div class="cake_bottom3_cream4"></div>
+                      <div class="cake_bottom3_cream5"></div>
+                      <div class="cake_bottom3_cream6"></div>
+                      <div class="cake_bottom3_cream7"></div>
+                      <div class="cake_bottom3_cream8"></div>
+                      <div class="cake_bottom3_cream9"></div>
+                      <div class="cake_bottom3_cream10"></div>
+                      <div class="cake_bottom3_cream11"></div>
+                      <div class="cake_bottom3_cream12"></div>
+                      <div class="cake_bottom3_cream13"></div>
+                      <div class="cake_bottom3_cream14"></div>
+                      <div class="cake_bottom3_cream15"></div>
+                      <div class="cake_bottom3_cream16"></div>
+                      <div class="cake_bottom3_cream17"></div>
+                      <div class="cake_bottom3_cream18"></div>
+                      <div class="cake_bottom3_cream19"></div>
+                      <div class="cake_bottom3_cream20"></div>
+                      <div class="cake_bottom3_cream21"></div>
+                      <div class="cake_bottom3_cream22"></div>
+                      <div class="cake_bottom3_cream23"></div>
+                  </section>
+              </section>
+              <section class="cake_bottom2">
+                  <section class="cake_bottom1_creams">
+                      <div class="cake_bottom1_cream1"></div>
+                      <div class="cake_bottom1_cream2"></div>
+                      <div class="cake_bottom1_cream3"></div>
+                      <div class="cake_bottom1_cream4"></div>
+                  </section>
+              </section>
+              <div class="cake_bottom">
+              </div>
+          </section>
+          <div class="line"></div>
+      </section>
+  <div class="container">
+          <div id="carousel">
+              <figure><img src="https://z-n.ak.fbcdn.net/sphotos-c.ak/hphotos-ak-xla1/v/t1.0-9/11082541_436283469869118_7664951051423208021_n.jpg?oh=c947d3f7277fe16d55d791bcf9d690cb&oe=56C2AA73&__gda__=1458947294_4307f252cfeb844f53f176ba254449ba" alt="" style="height:106px;width:186px;"></figure>
+              <figure><img src="https://z-1-scontent-hkg3-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/s720x720/45496_218350028329131_1512285888_n.jpg?oh=42f38e70f1cbc1706943b7a55802751d&oe=56B9A497" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-n.ak.fbcdn.net/sphotos-h.ak/hphotos-ak-xpf1/v/t1.0-9/994999_181500015347466_1687808511_n.jpg?oh=a000d06064186c9cef6cb6c511ffde8c&oe=56B8C2B1&__gda__=1455706616_2f77903fd29aa31b54a3cf9479c1a71e" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-n.ak.fbcdn.net/sphotos-a.ak/hphotos-ak-xaf1/v/t1.0-9/s720x720/11890956_496671927163605_3450274557839720831_n.jpg?oh=1b452b00e7b94d617e3bb74b90693597&oe=56F9D72F&__gda__=1458695112_9f7950276dd0b530dc2b65cc15c52ae3" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-1-scontent-hkg3-1.xx.fbcdn.net/hphotos-xpf1/v/l/t1.0-9/10441154_373495472814585_1314527946755064593_n.jpg?oh=311529993477a5520113dcc611d5914c&oe=56AE0EE9" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-n.ak.fbcdn.net/sphotos-c.ak/hphotos-ak-xap1/v/t1.0-9/1185836_218353201662147_1435826539_n.jpg?oh=1800f8224a893e08a4d7c10a0dd94789&oe=56C26FAE&__gda__=1455473287_d953523d01af0efb6ef41651305e0747" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-1-scontent-hkg3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/s720x720/10471262_365036900327109_76656269486797095_n.jpg?oh=2da4ba196c2c34ad6e34eac6ff2f05f0&oe=56B9894C" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-n.ak.fbcdn.net/photos-b.ak/hphotos-ak-frc3/v/t1.0-0/p180x540/10488091_338843289613137_7834925436889652184_n.jpg?oh=382ce7c61abdf6816abda62bed4911bb&oe=56B66751&__gda__=1455704483_fa1128cac1c67389757d7246779a0c44" style="height:106px;width:186px;" alt=""></figure>
+              <figure><img src="https://z-1-scontent-hkg3-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/1902010_270098309820969_373323463_n.jpg?oh=5cdfd0916ddf1332d67d232eaa4ccdc0&oe=56B4DE51" style="height:106px;width:186px;" alt=""></figure>
+          </div>
+      </div>
+  
+</body>
+</html>
